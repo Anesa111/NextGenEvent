@@ -3,70 +3,263 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ანესა - ნატურალური პროდუქტები & ნახევარფაბრიკატები</title>
+    <title>NextGen Event | Basketball Portal</title>
     <style>
-        :root { --primary: #2d5a27; --accent: #e67e22; --bg: #fdfbf7; --text: #333; }
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; background-color: var(--bg); color: var(--text); }
-        header { background: var(--primary); color: white; padding: 20px 5%; text-align: center; }
-        .hero { text-align: center; padding: 50px 20px; background: #f4efe6; }
-        .hero h1 { font-size: 2.5em; color: var(--primary); margin-bottom: 10px; }
-        .hero p { font-size: 1.2em; max-width: 600px; margin: 0 auto 20px; }
-        .btn { background: var(--accent); color: white; padding: 12px 25px; text-decoration: none; font-weight: bold; border-radius: 5px; display: inline-block; }
-        .features, .menu { padding: 40px 5%; max-width: 1100px; margin: auto; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 20px; }
-        .card { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); text-align: center; border-top: 4px solid var(--primary); }
-        .info-section { background: #eef4ed; padding: 40px 5%; text-align: center; }
-        footer { background: #1b3617; color: white; text-align: center; padding: 20px; }
-        .facebook-link { color: #3b5998; font-weight: bold; text-decoration: none; }
+        :root {
+            --bg-color: #0b111e;
+            --card-bg: #162032;
+            --accent-blue: #00d2ff;
+            --accent-orange: #ff5722;
+            --text-color: #ffffff;
+            --text-gray: #a0aec0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header {
+            width: 100%;
+            padding: 25px 0;
+            text-align: center;
+            background: linear-gradient(180deg, #101a2d 0%, var(--bg-color) 100%);
+            border-bottom: 2px solid var(--accent-blue);
+        }
+
+        header h1 {
+            margin: 0;
+            color: var(--accent-blue);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-size: 26px;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 750px;
+            margin: 20px auto;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 210, 255, 0.1);
+            margin-bottom: 20px;
+            border: 1px solid rgba(0, 210, 255, 0.2);
+        }
+
+        h2 {
+            color: var(--accent-orange);
+            margin-top: 0;
+            border-bottom: 1px solid #2a3a5c;
+            padding-bottom: 10px;
+            font-size: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 12px;
+            text-align: left;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: var(--text-gray);
+            font-size: 14px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="date"] {
+            width: 100%;
+            padding: 10px;
+            border-radius: 6px;
+            border: 1px solid #2a3a5c;
+            background-color: #0b111e;
+            color: white;
+            box-sizing: border-box;
+        }
+
+        button {
+            width: 100%;
+            background: linear-gradient(45deg, var(--accent-blue), #0088ff);
+            color: white;
+            border: none;
+            padding: 12px;
+            border-radius: 6px;
+            font-weight: bold;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+
+        #profile-section {
+            display: none;
+            text-align: center;
+        }
+
+        .profile-pic {
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--accent-blue);
+            margin-top: 10px;
+        }
+
+        .sheets-container {
+            width: 100%;
+            overflow: hidden;
+            border-radius: 8px;
+            border: 1px solid #2a3a5c;
+        }
+
+        .sheets-container iframe {
+            width: 100%;
+            height: 380px;
+            border: none;
+        }
+
+        footer {
+            width: 100%;
+            background-color: #060a12;
+            padding: 25px 0;
+            margin-top: 30px;
+            border-top: 1px solid #101a2d;
+            text-align: center;
+        }
+
+        .social-links a {
+            color: var(--accent-blue);
+            margin: 0 8px;
+            text-decoration: none;
+            font-size: 15px;
+            display: inline-block;
+            margin-bottom: 8px;
+        }
+
+        .donation-box {
+            background: #101a2d;
+            padding: 12px;
+            border-radius: 8px;
+            display: inline-block;
+            margin-top: 15px;
+            border: 1px dashed var(--accent-orange);
+        }
+
+        .bank-account {
+            color: var(--accent-blue);
+            font-family: monospace;
+            font-size: 15px;
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
 
     <header>
-        <h2>ანესა / ANESA</h2>
-        <p>ნატურალური პროდუქტები პირდაპირ თქვენს კართან</p>
+        <h1>NEXT GEN EVENT</h1>
+        <p style="color: var(--text-gray); margin: 5px 0 0 0; font-size: 14px;">Basketball Tournament Portal</p>
     </header>
 
-    <section class="hero">
-        <h1>მიირთვით ქართული ოჯახური იდილია</h1>
-        <p>ყოველდღიურად ახალი, უპრემიქსო ნედლი ხორცისგან დამზადებული ნახევარფაბრიკატები და ტრადიციული კერძები.</p>
-        <a href="https://www.facebook.com" class="btn">შეკვეთა Facebook-ზე</a>
-    </section>
+    <div class="container">
+        
+        <!-- სარეგისტრაციო ფორმა -->
+        <div class="card" id="registration-card">
+            <h2>მოთამაშის რეგისტრაცია</h2>
+            <form id="regForm">
+                <div class="form-group">
+                    <label>სახელი</label>
+                    <input type="text" id="firstName" required>
+                </div>
+                <div class="form-group">
+                    <label>გვარი</label>
+                    <input type="text" id="lastName" required>
+                </div>
+                <div class="form-group">
+                    <label>დაბადების თარიღი</label>
+                    <input type="date" id="dob" required>
+                </div>
+                <div class="form-group">
+                    <label>ელ-ფოსტა</label>
+                    <input type="email" id="email" required>
+                </div>
+                <button type="submit">რეგისტრაცია</button>
+            </form>
+        </div>
 
-    <section class="menu">
-        <h2 style="text-align:center; color: var(--primary);">ჩვენი პროდუქცია</h2>
-        <div class="grid">
-            <div class="card">
-                <h3>ხინკალი & პელმენი</h3>
-                <p>ნატურალური ხორცითა და ტრადიციული რეცეპტით მომზადებული, ყოველდღიურად ახალი.</p>
-            </div>
-            <div class="card">
-                <h3>მწვადი & ქაბაბი</h3>
-                <p>უპრემიქსო, ნედლი ხორცისგან დამზადებული წვნიანი ქაბაბი და დამარინადებული მწვადი.</p>
-            </div>
-            <div class="card">
-                <h3>გაყინული ნაწარმი</h3>
-                <p>სხვადასხვა სახის უმაღლესი ხარისხის ნახევარფაბრიკატები სწრაფი მომზადებისთვის.</p>
-            </div>
-            <div class="card">
-                <h3>ტრადიციული კერძები</h3>
-                <p>მზა ოჯახური კერძები (მაგ. ყურების მუჟუჟი) და სპეციალური რეცეპტურა.</p>
+        <!-- პროფილი -->
+        <div class="card" id="profile-section">
+            <h2>ჩემი პროფილი</h2>
+            <p>მოგესალმებით, <span id="user-name" style="color: var(--accent-blue); font-weight: bold;"></span>!</p>
+            <div>
+                <img src="https://via.placeholder.com/110" id="avatar" class="profile-pic" alt="Profile Picture"><br><br>
+                <label for="imgInput" style="cursor: pointer; color: var(--accent-blue); font-weight: bold;">📷 ფოტოს ატვირთვა გალერეიდან</label>
+                <input type="file" id="imgInput" accept="image/*" style="display: none;">
+                <p style="font-size: 11px; color: var(--text-gray); margin-top: 6px;">გთხოვთ დაიცვათ ცენზურა.</p>
             </div>
         </div>
-    </section>
 
-    <section class="info-section">
-        <h2>სამუშაო საათები & ლოკაციები</h2>
-        <p><strong>სამუშაო საათები:</strong> ორშაბათი - კვირა | 09:00 – 23:00</p>
-        <p><strong>მისამართი (თბილისი):</strong> სიმონ ჩიქოვანის ქ. №73</p>
-        <p><strong>მისამართი (წყნეთი):</strong> რუსთაველის ქ. №56</p>
-        <p>🚚 <strong>მოქმედებს სწრაფი მიტანის სერვისი!</strong></p>
-    </section>
+        <!-- ტურნირის სტატისტიკა -->
+        <div class="card">
+            <h2>ტურნირის სტატისტიკა</h2>
+            <div class="sheets-container">
+                <iframe src="https://docs.google.com/spreadsheets/d/1-KcwfolV2kYuUQDK3Zf4PjaDEoUcN_NDb5XYToq-8Ek/htmlembed?widget=false&headers=false"></iframe>
+            </div>
+        </div>
 
+    </div>
+
+    <!-- INFO / FOOTER -->
     <footer>
-        <p>© ანესა ნატურალური პროდუქტები. ყველა უფლება დაცულია.</p>
-        <p>გვეწვიეთ ოფიციალურ გვერდზე: <a href="https://www.facebook.com" class="facebook-link" style="color: #ffd700;">Facebook Page</a></p>
+        <div class="container" style="margin: 0 auto;">
+            <h2 style="color: var(--accent-blue); margin-bottom: 15px;">INFO</h2>
+            
+            <div class="social-links">
+                <a href="https://www.instagram.com/event.nextgen?igsh=bmNxcmZjNnFtdWx4" target="_blank">Instagram</a> |
+                <a href="https://facebook.com" target="_blank">Facebook: NextGenEvent</a> |
+                <a href="https://www.tiktok.com/@next.gen.event?_r=1&_t=ZS-98wLHwmTtIt" target="_blank">TikTok</a> |
+                <a href="https://youtube.com/@nextgenevent-w9t?si=NwCIZUYsBRkTEho1" target="_blank">YouTube</a>
+            </div>
+
+            <div class="donation-box">
+                <h3 style="margin: 0 0 6px 0; color: var(--accent-orange); font-size: 16px;">პროექტის განვითარებისთვის</h3>
+                <p style="margin: 0; font-size: 13px; color: var(--text-gray);">ანგარიშის ნომერი (TBC):</p>
+                <span class="bank-account">GE85TB7323545064300086</span>
+            </div>
+        </div>
     </footer>
+
+    <script>
+        document.getElementById('regForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const fname = document.getElementById('firstName').value;
+            const lname = document.getElementById('lastName').value;
+            
+            document.getElementById('registration-card').style.display = 'none';
+            document.getElementById('profile-section').style.display = 'block';
+            document.getElementById('user-name').innerText = fname + ' ' + lname;
+        });
+
+        document.getElementById('imgInput').addEventListener('change', function(e) {
+            const file = e.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    document.getElementById('avatar').src = e.target.result;
+                }
+                reader.readAsDataURL(file);
+            }
+        });
+    </script>
 
 </body>
 </html>
